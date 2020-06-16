@@ -14,12 +14,29 @@
     <script src="lib/jquery.cookie.js"></script>
     <script src="js/jwt.js"></script>
     <script src="js/diary_group.js"></script>
+    <script>
+        window.addEventListener('beforeinstallprompt', function (e) {
+            // beforeinstallprompt Event fired
+            // e.userChoice will return a Promise.
+            e.userChoice.then(function (choiceResult) {
+                console.log(choiceResult.outcome);
+                if (choiceResult.outcome == 'dismissed') {
+                    console.log('User cancelled home screen install');
+                }
+                else {
+                    console.log('User added to home screen');
+                }
+            });
+        });
+    </script>
+
 </head>
 
 <body class="">
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">日記！</a>
-        <a class="btn text-light" href="javascript:$.cookie('refresh',null);$.cookie('jwt',null);$.cookie('username',null);window.history.go(0)">登出</a>
+        <a class="btn text-light"
+            href="javascript:$.cookie('refresh',null);$.cookie('jwt',null);$.cookie('username',null);window.history.go(0)">登出</a>
     </nav>
     <div class="list-group list-group-flush" id="diary_group_list">
         <span href="#" class="list-group-item">
@@ -27,7 +44,7 @@
                 努力讀取中..
             </h4>
             <p class="list-group-item-text">
-                
+
             </p>
         </span>
     </div>
