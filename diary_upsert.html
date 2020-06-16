@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>日記 | 日記系統</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/jquery.js"></script>
+    <script src="lib/jquery.cookie.js"></script>
+    <script src="js/jwt.js"></script>
+    <script src="js/diary_upsert.js"></script>
+</head>
+
+<body class="">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="javascript:window.history.go(-1)"> ⮈ 返回</a>
+        <div>
+            <a class="btn btn-sm btn-primary" id="save" href="javascript:window.history.go(-1)">儲存</a>
+        </div>
+
+    </nav>
+    <div class="container">
+        <div class="row mb-3"></div>
+        <div class="row">
+            <div class="col-12" id="wrapper">
+                <textarea id="editor" disabled class="form-control d-block mb-3" style="min-height: 60vh;"></textarea>
+                <button type="button" class="btn btn-block btn-danger" id="delete">刪除</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

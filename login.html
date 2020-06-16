@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>登入 | 日記系統</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/jquery.js"></script>
+    <script src="lib/jquery.cookie.js"></script>
+    <script src="js/jwt.js"></script>
+    <script src="js/login.js"></script>
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="signin.css" rel="stylesheet"> -->
+</head>
+
+<body class="text-center">
+    <div class="container">
+        <div class="row mb-5"></div>
+        <div class="row mb-3"></div>
+        <div class="row">
+            <form class="form-signin col col-12">
+                <h1 class="h3 mb-3 font-weight-normal">登入</h1>
+                <label for="username" class="sr-only">用戶名稱</label>
+                <input type="text" id="username" class="form-control mb-3" placeholder="Username" required autofocus>
+                <label for="password" class="sr-only">密碼</label>
+                <input type="password" id="password" class="form-control mb-3" placeholder="Password" required>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit" id="login">登入</button>
+                <p class="mt-5 mb-3 text-muted">&copy; 2019-<span id="year_now"></span></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>日記 | 日記系統</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/jquery.js"></script>
+    <script src="lib/jquery.cookie.js"></script>
+    <script src="js/jwt.js"></script>
+    <script src="js/diary.js"></script>
+</head>
+
+<body class="">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="diary_group.html">日記！</a>
+        <a class="btn text-light" href="" id="new_diary">寫日記</a>
+    </nav>
+    <div class="container">
+        <div class="row mb-3"></div>
+        <div class="row">
+            <div class="col-12" id="wrapper">
+                <div class="card mb-3 loading">
+                    <div class="card-body">
+                        <div class="float-right text-secondary">2002-00-00T00:00:00</div>
+                        <h5 class="card-title align-top">瘋狂載入中...<div class="spinner-border" role="status">
+                            </div>
+                        </h5>
+                        <p class="card-text">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-secondary btn-block mb-3" id="loadmore" href="#">載入更多</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

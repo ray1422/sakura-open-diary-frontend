@@ -1,0 +1,10 @@
+<script src="lib/jquery.js"></script>
+<script src="lib/jquery.cookie.js"></script>
+<script src="js/jwt.js"></script>
+<script>
+    if (!JWT.token) {
+        window.location.href = "login.html"
+    } else {
+        window.location.href = "diary_group.html"
+    }
+</script>
