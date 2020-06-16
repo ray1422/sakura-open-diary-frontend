@@ -1,14 +1,11 @@
 {
     "name": "日記！",
     "short_name": "日記！",
-    "start_url": ".",
+    "theme_color": "#343a40",
+    "background_color": "#343a40",
     "display": "minimal-ui",
-    "background_color": "#000",
-    "description": "一個簡單的日記",
-    "icons": [],
-    "related_applications": [
-        {
-            "platform": "web"
-        }
-    ]
-}
+    "Scope": "/",
+    "start_url": "/",
+    "icons": null,
+    "splash_pages": null
+  }
