@@ -3,7 +3,7 @@
   "short_name": "日記！",
   "theme_color": "#343a40",
   "background_color": "#343a40",
-  "display": "minimal-ui",
+  "display": "standalone",
   "Scope": "/",
   "start_url": "/",
   "icons": [
