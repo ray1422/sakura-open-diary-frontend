@@ -8,6 +8,11 @@ $(document).ready(() => {
         getNext()
         event.preventDefault()
     })
+    $(document).scroll(()=>{
+        if (($(document).height() - $(window).height()) - $(document).scrollTop() < 200 && !$("#loadmore").attr("disabled")) {
+            $("#loadmore").click()
+        }
+    })
     function getNext() {
         JWT.ajax({
             type: "GET",
