@@ -16,7 +16,7 @@ $(document).ready(function () {
         }).done((data) => {
             JWT.setToken(data.access)
             JWT.setRefresh(data.refresh)
-            $.cookie("username", $("#username").val(), { expires: 28 })
+            window.localStorage.setItem("username", $("#username").val())
             console.log(data)
             $("#login").text("登入了！轉址中..")
             window.location.href = "diary_group.html"

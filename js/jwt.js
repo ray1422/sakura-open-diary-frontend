@@ -36,4 +36,3 @@ JWT = {
 }
 JWT.token = $.cookie("jwt")
 JWT.refreshKey = $.cookie("refresh")
-$.cookie("username", $.cookie("username"), { expires: 28 })

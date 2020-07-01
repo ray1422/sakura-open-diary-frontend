@@ -8,7 +8,7 @@ $(document).ready(() => {
         getNext()
         event.preventDefault()
     })
-    $(document).scroll(()=>{
+    $(document).scroll(() => {
         if (($(document).height() - $(window).height()) - $(document).scrollTop() < 200 && !$("#loadmore").attr("disabled")) {
             $("#loadmore").click()
         }
@@ -32,7 +32,7 @@ $(document).ready(() => {
                     <div class="float-right text-secondary">${new Date(result.created).toLocaleString()}</div>
                     <h5 class="card-title align-top">${result.author.username}</h5>
                     <p class="card-text content"></p>
-                    ${$.cookie('username') == result.author.username ? `<a href="diary_upsert.html?id=${result.id}&group=${groupID}" class="btn btn-primary float-right">編輯</a>` : ''}
+                    ${window.localStorage.getItem("username") == result.author.username ? `<a href="diary_upsert.html?id=${result.id}&group=${groupID}" class="btn btn-primary float-right">編輯</a>` : ''}
                 </div>
             </div>
                 `
