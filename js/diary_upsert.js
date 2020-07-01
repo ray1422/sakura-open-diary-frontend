@@ -2,6 +2,7 @@ $(document).ready(() => {
     JWT.refresh()
     const diaryID = new URLSearchParams(window.location.search).get("id");
     const groupID = new URLSearchParams(window.location.search).get("group");
+    let keep_update_tmp_save = true
     isInsert = diaryID === null
     const url = `/diary/${isInsert ? '' : diaryID}`
 
@@ -29,6 +30,7 @@ $(document).ready(() => {
         }
 
         setInterval(() => {
+            if (!keep_update_tmp_save) return 
             localStorage.setItem('new_diary_tmp_id', groupID);
             localStorage.setItem('new_diary_tmp', $("#editor").val());
         });
@@ -58,6 +60,7 @@ $(document).ready(() => {
                 group_id: groupID
             }
         }).done((data) => {
+            keep_update_tmp_save = false
             localStorage.setItem('new_diary_tmp_id', groupID);
             localStorage.setItem('new_diary_tmp', "");
             window.location.href = document.referrer + "#" + Math.random()
