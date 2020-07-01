@@ -19,6 +19,20 @@ $(document).ready(() => {
     } else {
         $("#editor").height($("#editor")[0].scrollHeight).attr("disabled", false)
         $("#delete").hide()
+        console.log(localStorage)
+        if (window.localStorage.getItem("new_diary_tmp") != null && window.localStorage.getItem("new_diary_tmp_id") == groupID) {
+            let content = window.localStorage.getItem("new_diary_tmp");
+            $("#editor").val(content)
+        } else {
+            localStorage.setItem('new_diary_tmp_id', groupID);
+            localStorage.setItem('new_diary_tmp', "");
+        }
+
+        setInterval(() => {
+            localStorage.setItem('new_diary_tmp_id', groupID);
+            localStorage.setItem('new_diary_tmp', $("#editor").val());
+        });
+
     }
     $("#delete").click(function (event) {
         event.preventDefault()
@@ -28,6 +42,7 @@ $(document).ready(() => {
             type: "DELETE"
         }).done(function () {
             window.location.href = document.referrer + "#" + Math.random()
+
         }).fail(function () {
             alert("不知道哪裡出錯了！")
         })
@@ -44,11 +59,14 @@ $(document).ready(() => {
             }
         }).done((data) => {
             window.location.href = document.referrer + "#" + Math.random()
+            localStorage.setItem('new_diary_tmp_id', groupID);
+            localStorage.setItem('new_diary_tmp', "");
         }).fail((data, _) => {
             console.log(data)
             alert("不知道哪裡出錯了！" + _)
             $("#save, #editor").attr("disabled", false)
         })
     })
+
 
 })
