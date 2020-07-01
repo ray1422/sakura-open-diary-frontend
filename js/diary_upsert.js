@@ -58,9 +58,9 @@ $(document).ready(() => {
                 group_id: groupID
             }
         }).done((data) => {
-            window.location.href = document.referrer + "#" + Math.random()
             localStorage.setItem('new_diary_tmp_id', groupID);
             localStorage.setItem('new_diary_tmp', "");
+            window.location.href = document.referrer + "#" + Math.random()
         }).fail((data, _) => {
             console.log(data)
             alert("不知道哪裡出錯了！" + _)
