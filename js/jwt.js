@@ -22,7 +22,7 @@ JWT = {
     refresh: () => {
         $.post({
             type: "POST",
-            url: BASE_URL + "/api/auth/jwt/refresh/",
+            url: BASE_URL + "/api/auth/jwt/refresh",
             data: {
                 'refresh': JWT.refreshKey
             }

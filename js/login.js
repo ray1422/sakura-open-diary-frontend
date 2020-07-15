@@ -8,7 +8,7 @@ $(document).ready(function () {
         $("#login, #username, #password").attr("disabled", true)
         JWT.ajax({
             type: "POST",
-            url: "/api/auth/jwt/login/",
+            url: "/api/auth/jwt/login",
             data: {
                 username: username,
                 password: password
