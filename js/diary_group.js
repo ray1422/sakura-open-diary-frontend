@@ -2,7 +2,7 @@ $(document).ready(() => {
     JWT.refresh()
     JWT.ajax({
         type: "GET",
-        url: "/diary/group",
+        url: "/diary/group/",
         data: ""
     }).done((data) => {
         $("#diary_group_list").text('')

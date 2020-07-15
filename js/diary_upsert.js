@@ -4,7 +4,7 @@ $(document).ready(() => {
     const groupID = new URLSearchParams(window.location.search).get("group");
     let keep_update_tmp_save = true
     isInsert = diaryID === null
-    const url = `/diary/${isInsert ? '' : diaryID}`
+    const url = `/diary/${isInsert ? '' : diaryID}/`
 
     if (!isInsert) {
         JWT.ajax({
