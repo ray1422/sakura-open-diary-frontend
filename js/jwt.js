@@ -1,4 +1,4 @@
-BASE_URL = "https://ray.jamex.me"
+BASE_URL = "https://diary-backend.ray-fish.me"
 JWT = {
     token: null,
     refreshKey: null,
